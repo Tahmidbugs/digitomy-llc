@@ -1,0 +1,131 @@
+.about__me-image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform:rotate(10deg);
+    transition: transform 1s ease;
+}
+.about__me{
+    
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background-color: #292020;
+   
+    place-items: center;
+}
+.about__me-image:hover{
+    transform:rotate(0deg);
+
+}
+img{
+  cursor: url("https://www.freeiconspng.com/thumbs/cursor-png/hand-cursor-png-click-cursor-hand-icon-13.png"), auto;
+}
+.title{
+    font-family: 'Nova Oval', cursive;
+    font-weight: 800;
+    font-size: 60px;
+    color: blue;
+   
+    transition: color 10s ease-in-out;
+    animation: color-change 10s ease-in-out infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(37, 37, 83);
+  }
+  25% {
+    color: rgb(73, 72, 129);
+  }
+  50% {
+    color: rgb(23, 81, 18);
+  }
+  75% {
+    color: rgb(30, 87, 92);
+  }
+  100% {
+    color: rgb(37, 37, 83);
+  }
+}
+
+.info{
+    font-family: 'Comfortaa', cursive;
+}
+.listhover{
+  background-color: rgb(82, 121, 148);
+  padding:10px;
+  border-radius: 20px;
+  margin:10px;
+}
+.listhover:hover{
+  background-color: #384f62;
+}
+.listhover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.listhover a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+.listhover a span {
+  display: none;
+  color:#a5cbe5;
+}
+
+
+.listhover:hover a span {
+  display: inline-block;
+  margin-left: 5px;
+  
+}
+
+.listhover:hover div {
+  color:#a5cbe5;
+  
+}
+
+.navbarbody{
+  background-color: #3c6b86;
+}
+.activated a span{
+  display: inline-block;
+  margin-left: 5px;
+}
+.activated{
+  background-color:  #384f62;
+  color:#a5cbe5;
+}
+
+.fadeIn {
+  animation: fadeInSwipeUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInSwipeUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
