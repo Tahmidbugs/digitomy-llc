@@ -24,14 +24,22 @@ const Patents = () => {
       <div style={{ marginTop: 190, marginBottom: 80 }}>
         <div style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: 40 }} className="title">
-            Protected Innovation: Our Patented Creations
+            Patented Creations
           </h1>
           <br />
           <br />
 
-          <h3>
-            Our patented algorithms and patent pending smart mosquito trap will
-            revolutionize surveillance of vector mosquitoes via automation.
+          <h3
+            style={{
+              fontSize: 40,
+
+              fontFamily: "Marck Script",
+              paddingLeft: "20%",
+              paddingRight: "20%",
+            }}
+          >
+            "Our patented algorithms and patent pending smart mosquito trap will
+            revolutionize surveillance of vector mosquitoes via automation.""
           </h3>
         </div>
         <div
@@ -59,7 +67,7 @@ const Card = ({ title, description }) => {
   return (
     <div
       style={{
-        backgroundColor: hover ? "#292020" : "#302F2F",
+        backgroundColor: hover ? "#384F62" : "#3C6B86",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -76,7 +84,7 @@ const Card = ({ title, description }) => {
     >
       <div
         style={{
-          backgroundColor: hover ? "#302F2F" : "#292020",
+          backgroundColor: hover ? "#3C6B86" : "#384F62",
           width: "50px",
           height: "50px",
           display: "flex",
@@ -87,13 +95,14 @@ const Card = ({ title, description }) => {
         }}
       >
         <TbLicense
-          style={{ color: `${hover ? "#292020" : "#5D5D5D"}` }}
+          style={{ color: `${hover ? "#99AFC6" : "#99AFC6"}` }}
           size={40}
         />
       </div>
       <h3
         style={{
-          color: hover ? "#717070" : "#8E8E8E",
+          color: hover ? "#99AFC6" : "black",
+          fontWeight: "700",
           transition: "all 0.3s ease-in-out",
           transform: hover ? "translateY(-10px)" : "translateY(0)",
         }}
@@ -102,7 +111,8 @@ const Card = ({ title, description }) => {
       </h3>
       <p
         style={{
-          color: hover ? "#717070" : "#8E8E8E",
+          color: hover ? "#99AFC6" : "black",
+          fontWeight: "700",
           transition: "all 0.3s ease-in-out",
           transform: hover ? "translateY(-10px)" : "translateY(0)",
         }}

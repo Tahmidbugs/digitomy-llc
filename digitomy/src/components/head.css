@@ -8,7 +8,7 @@
     
     aspect-ratio: 1/1;
     border-radius: 2rem;
-    background-color: #292020;
+    background-color: #384F62;
    
     place-items: center;
 }
@@ -23,7 +23,7 @@ img{
     font-family: 'Nova Oval', cursive;
     font-weight: 800;
     font-size: 60px;
-    color: blue;
+    color: rgb(41, 41, 90);
    
     transition: color 10s ease-in-out;
     animation: color-change 10s ease-in-out infinite;
@@ -57,7 +57,7 @@ img{
   margin:10px;
 }
 .listhover:hover{
-  background-color: #384f62;
+  background-color: #2b3d4c;
 }
 .listhover {
   display: flex;
@@ -80,6 +80,7 @@ a{
 .listhover a span {
   display: none;
   color:#a5cbe5;
+  font-weight: 700;
 }
 
 
@@ -95,14 +96,18 @@ a{
 }
 
 .navbarbody{
-  background-color: #3c6b86;
+  background-color: #3d5462;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+
 }
 .activated a span{
   display: inline-block;
   margin-left: 5px;
 }
 .activated{
-  background-color:  #384f62;
+  background-color:  #2b3d4c;
   color:#a5cbe5;
 }
 

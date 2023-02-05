@@ -1,13 +1,16 @@
 import React from "react";
+
+import ReactPlayer from "react-player";
+
 const Demo = () => {
   const toRotate = [
-    { text: "AI", color: "#3F5681" },
     { text: "Malaria", color: "#5757D4" },
-    { text: "Mosquitoes", color: "#CD6829" },
+    { text: "Mosquitoes", color: "#0D6A8F" },
     { text: "Chikungunya", color: "#A4429B" },
     { text: "Algorithms", color: "#E78C19" },
-    { text: "Public-Health", color: "#77307E" },
+    { text: "Public-Health", color: "#5747AF" },
     { text: "Zika", color: "#428157" },
+    { text: "AI", color: "#3F5681" },
     { text: "Culex", color: "#9C4A87" },
     { text: "stephensi", color: "#15927D" },
     { text: "Smart-trap", color: "#68873A" },
@@ -23,6 +26,7 @@ const Demo = () => {
   }
   const [loopNum, setLoopNum] = React.useState(0);
   const [isDeleting, setIsDeleting] = React.useState(false);
+  const [hover, setHover] = React.useState(false);
   const [text, setText] = React.useState({ text: "", color: "" });
   const [delta, setDelta] = React.useState(50);
 
@@ -97,9 +101,9 @@ const Demo = () => {
                 })}
                 <span
                   style={{
-                    background: "black",
+                    background: "#474747",
                     height: "50px",
-                    width: "10px",
+                    width: "8px",
                     display: "inline-block",
                     position: "relative",
 
@@ -111,12 +115,28 @@ const Demo = () => {
             )}
           </div>
 
-          <div style={{ margin: "auto", textAlign: "center", width: "50%" }}>
-            <video width="400" controls>
-              <source
-                src="https://www.youtube.com/watch?v=b7Bcpd4vR5w&ab_channel=shinduuu"
-                type="video/mp4"
-              />
+          <div
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              width: "50%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
+            <video
+              width="800"
+              style={{
+                borderRadius: 30,
+                transform: hover ? "scale(1.1)" : "scale(1)",
+                transition: "transform 0.3s ease-in-out",
+              }}
+              controls
+              autoPlay
+            >
+              <source src={require("../assets/demo.mp4")} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

@@ -58,7 +58,7 @@ const Card = ({ name, position, positionDescription, profilePicture }) => {
   return (
     <div
       style={{
-        backgroundColor: hover ? "#333" : "#292020",
+        backgroundColor: hover ? "#384F62" : "#3C6B86",
         width: "30%",
         display: "flex",
         flexDirection: "column",
@@ -86,7 +86,7 @@ const Card = ({ name, position, positionDescription, profilePicture }) => {
       />
       <h3
         style={{
-          color: "#fff",
+          color: hover ? "#99AFC6" : "black",
           fontFamily: "Nova Oval, cursive",
 
           marginBottom: "0.5rem",
@@ -96,7 +96,7 @@ const Card = ({ name, position, positionDescription, profilePicture }) => {
       </h3>
       <h4
         style={{
-          color: "#ccc",
+          color: hover ? "#99AFC6" : "black",
           fontWeight: "bold",
           marginBottom: "0.5rem",
         }}
@@ -105,7 +105,7 @@ const Card = ({ name, position, positionDescription, profilePicture }) => {
       </h4>
       <h4
         style={{
-          color: "#ccc",
+          color: hover ? "#99AFC6" : "black",
           textAlign: "center",
         }}
       >

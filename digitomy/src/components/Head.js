@@ -24,13 +24,16 @@ const Head = () => {
         className="bodyPart"
       >
         <div style={{ width: "50%", margin: "auto", textAlign: "center" }}>
-          <h1 className="title">Digitomy, LLC </h1>
+          <h1 className="title ">Digitomy, LLC </h1>
           {animationData && (
             <div style={{ width: "20%", position: "absolute", top: 150 }}>
               <Lottie options={{ animationData }} eventListeners={[]} />
             </div>
           )}
-          <h3 className="info">
+          <h3
+            className="info fadeIn"
+            style={{ fontSize: 25, fontWeight: "900" }}
+          >
             Digitomy is a USF based start-up geared towards automated
             surveillance
             <br />
