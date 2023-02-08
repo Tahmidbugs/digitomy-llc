@@ -10,7 +10,7 @@ import Team from "./components/Team";
 import Lottie from "react-lottie";
 import ChatBot from "./components/Chatbot";
 import animationDatas from "./lotties/mosquito.json";
-
+import AnimatedCursor from "react-animated-cursor";
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +22,29 @@ function App() {
   const [isChatOpen, setIsChatOpen] = React.useState(false);
   return (
     <div className="body">
+      <AnimatedCursor
+        innerSize={20}
+        outerSize={50}
+        color="71, 71, 71"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={3}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          "img",
+          "Lottie",
+          ".link",
+        ]}
+      />
       <Navbar />
       <Router>
         <Routes>
@@ -34,15 +57,22 @@ function App() {
         </Routes>
       </Router>
       {animationDatas && (
-        <div
-          style={{ width: "10%", position: "absolute", bottom: 50, right: 20 }}
-          onClick={() => setIsChatOpen(true)}
-        >
-          <Lottie
-            options={{ animationData: animationDatas }}
-            eventListeners={[{}]}
-          />
-        </div>
+        <a>
+          <div
+            style={{
+              width: "10%",
+              position: "absolute",
+              bottom: 50,
+              right: 20,
+            }}
+            onClick={() => setIsChatOpen(true)}
+          >
+            <Lottie
+              options={{ animationData: animationDatas }}
+              eventListeners={[{}]}
+            />
+          </div>
+        </a>
       )}
       {isChatOpen && (
         <ChatBot setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen} />

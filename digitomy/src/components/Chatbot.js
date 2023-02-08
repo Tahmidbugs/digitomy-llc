@@ -23,14 +23,16 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
         <>
           <div className="chat-header">
             <h3>Digitomy_Bot</h3>
-            <FaTimes
-              onClick={() => {
-                setIsChatOpen(!isChatOpen);
-                console.log("turned off ", isChatOpen);
-              }}
-              size={30}
-              style={{ cursor: "pointer" }}
-            />
+            <a>
+              <FaTimes
+                onClick={() => {
+                  setIsChatOpen(!isChatOpen);
+                  console.log("turned off ", isChatOpen);
+                }}
+                size={30}
+                style={{ cursor: "pointer" }}
+              />
+            </a>
           </div>
           <div className="chat-body">
             <div className="message-container">
@@ -65,13 +67,14 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
                   marginRight: 40,
                 }}
               />
-
-              <BiPaperPlane
-                size={40}
-                style={{ marginBottom: 20, cursor: "pointer" }}
-                class="icon"
-                onClick={handleSubmit}
-              />
+              <a>
+                <BiPaperPlane
+                  size={40}
+                  style={{ marginBottom: 20, cursor: "pointer" }}
+                  class="icon"
+                  onClick={handleSubmit}
+                />
+              </a>
             </div>
           </div>
         </>
