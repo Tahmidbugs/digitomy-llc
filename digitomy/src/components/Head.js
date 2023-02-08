@@ -1,9 +1,10 @@
 import React from "react";
 import "./head.css";
 import Lottie from "react-lottie";
-
+import ChatBot from "./Chatbot";
 import Machine from "../assets/machine.png";
 import animationData from "../lotties/mosquit.json";
+import animationDatas from "../lotties/mosquito.json";
 const Head = () => {
   const defaultOptions = {
     loop: true,
@@ -13,6 +14,8 @@ const Head = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  const [isChatOpen, setIsChatOpen] = React.useState(false);
+  console.log("rerednered");
   return (
     <>
       <div
@@ -25,6 +28,7 @@ const Head = () => {
       >
         <div style={{ width: "50%", margin: "auto", textAlign: "center" }}>
           <h1 className="title ">Digitomy, LLC </h1>
+
           {animationData && (
             <div style={{ width: "20%", position: "absolute", top: 150 }}>
               <Lottie options={{ animationData }} eventListeners={[]} />

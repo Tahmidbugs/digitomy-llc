@@ -21,7 +21,7 @@ const Patents = () => {
   ];
   return (
     <>
-      <div style={{ marginTop: 190, marginBottom: 80 }}>
+      <div style={{ marginTop: 150, marginBottom: 80 }}>
         <div style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: 40 }} className="title">
             Patented Creations
@@ -50,8 +50,14 @@ const Patents = () => {
             marginTop: 80,
           }}
         >
-          {pats.map((item) => {
-            return <Card title={item.title} description={item.description} />;
+          {pats.map((item, index) => {
+            return (
+              <Card
+                title={item.title}
+                description={item.description}
+                index={index}
+              />
+            );
           })}
         </div>
       </div>
@@ -61,21 +67,22 @@ const Patents = () => {
 
 export default Patents;
 
-const Card = ({ title, description }) => {
+const Card = ({ title, description, index }) => {
   const [hover, setHover] = React.useState(false);
-
+  console.log(title, index);
   return (
     <div
       style={{
-        backgroundColor: hover ? "#384F62" : "#3C6B86",
+        backgroundColor: hover ? "#464646" : "#777777",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         cursor: "pointer",
         margin: 10,
-        width: "30%",
+        width: "32%",
         padding: 20,
+        animation: ` fadeInSwipeUp ${index + 1 * 0.8}s ease-in-out forwards`,
 
         borderRadius: 20,
       }}
@@ -84,9 +91,9 @@ const Card = ({ title, description }) => {
     >
       <div
         style={{
-          backgroundColor: hover ? "#3C6B86" : "#384F62",
-          width: "50px",
-          height: "50px",
+          backgroundColor: hover ? "#777777" : "#464646",
+          width: "70px",
+          height: "70px",
           display: "flex",
           borderRadius: 40,
           alignItems: "center",
@@ -95,13 +102,13 @@ const Card = ({ title, description }) => {
         }}
       >
         <TbLicense
-          style={{ color: `${hover ? "#99AFC6" : "#99AFC6"}` }}
-          size={40}
+          style={{ color: `${hover ? "#C9C9C9" : "#C9C9C9"}` }}
+          size={45}
         />
       </div>
       <h3
         style={{
-          color: hover ? "#99AFC6" : "black",
+          color: hover ? "#C9C9C9" : "black",
           fontWeight: "700",
           transition: "all 0.3s ease-in-out",
           transform: hover ? "translateY(-10px)" : "translateY(0)",
@@ -111,8 +118,10 @@ const Card = ({ title, description }) => {
       </h3>
       <p
         style={{
-          color: hover ? "#99AFC6" : "black",
-          fontWeight: "700",
+          color: hover ? "#C9C9C9" : "black",
+          fontWeight: "500",
+          fontSize: 20,
+          paddingRight: 20,
           transition: "all 0.3s ease-in-out",
           transform: hover ? "translateY(-10px)" : "translateY(0)",
         }}

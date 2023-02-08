@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" style={{ marginTop: 100 }}>
+    <section id="contact" style={{ marginTop: 200 }}>
       <h2 style={{ textAlign: "center", fontSize: 49 }} className="title">
         Get in touch
       </h2>
@@ -40,11 +40,13 @@ const Contact = () => {
         >
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
-            <h4>Email</h4>
-            <h5>Sriramchellappan@gmail.com</h5>
-            <a href="mailto:tahmidahmed1@usf.edu" target="_blank">
-              Send an email
-            </a>
+            <h3>Email</h3>
+            <h4>digitomytech@gmail.com</h4>
+            <h4>
+              <a href="mailto:digitomytech@gmail.com" target="_blank">
+                Send an email
+              </a>
+            </h4>
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>

@@ -1,0 +1,118 @@
+.chat-container {
+    background-color: rgb(165, 162, 162);
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #848282;
+  }
+  
+  .chat-header {
+    background-color: #7d7d7d;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .chat-header h3 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .close-icon {
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .chat-body {
+    height: 80%;
+    overflow-y: scroll;
+    padding: 20px;
+  }
+  
+  .bot-message {
+    background-color: #717171;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    color:white;
+    font-size: 20px;
+    margin: 10px;
+    align-self: flex-start;
+  }
+  
+  .user-message{
+    background-color: #0e415a;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    margin: 10px;
+  
+    margin-left: auto;
+  }
+  .glow {
+    box-shadow: 0 0 40px #ffffff;
+  }
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  
+  .chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #8a8a8a;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .chat-footer form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-footer form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .chat-footer form button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .chat-footer form button[type="submit"]:hover {
+    background-color: #444;
+  }
+  
+.icon:hover {
+  cursor:pointer;
+    transform: scale(1.2);
+    }
+    
+    .icon {
+    transition: transform 0.2s ease-in-out;
+    }
+    
+  
