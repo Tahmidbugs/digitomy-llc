@@ -30,9 +30,11 @@ const Head = () => {
           <h1 className="title ">Digitomy, LLC </h1>
 
           {animationData && (
-            <div style={{ width: "20%", position: "absolute", top: 150 }}>
-              <Lottie options={{ animationData }} eventListeners={[]} />
-            </div>
+            <a>
+              <div style={{ width: "20%", position: "absolute", top: 150 }}>
+                <Lottie options={{ animationData }} eventListeners={[]} />
+              </div>
+            </a>
           )}
           <h3
             className="info fadeIn"

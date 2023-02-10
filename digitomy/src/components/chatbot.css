@@ -1,4 +1,6 @@
 .chat-container {
+  background-color: #a6a6a6;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
     background-color: rgb(165, 162, 162);
     width: 400px;
     height: 500px;
@@ -10,9 +12,10 @@
   }
   
   .chat-header {
-    background-color: #7d7d7d;
+    background-color: #4c4b4b;
     padding: 20px;
     display: flex;
+    color:rgb(166, 161, 161);
     justify-content: space-between;
     align-items: center;
     border-top-left-radius: 10px;
@@ -34,6 +37,10 @@
     overflow-y: scroll;
     padding: 20px;
   }
+  .chat-body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(53, 50, 50);
+}
   
   .bot-message {
     background-color: #717171;
